@@ -11,6 +11,7 @@ class FourBoard: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.bar_gl.titleLabel?.text = "Four"
 
         // Do any additional setup after loading the view.
     }

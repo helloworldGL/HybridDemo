@@ -14,7 +14,7 @@ class BaseViewController: UIViewController {
     var leftBtn_gl:UIButton!
     var bar_gl:NBNavigationBar!
     var righttBtn_gl:UIButton!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,12 +22,12 @@ class BaseViewController: UIViewController {
         setupViews()
         
         let bar:NBNavigationBar = NBNavigationBar.add(self.view) { [self] leftBtn, rightBtn, titleLab, bottomLineView, color, leftLineView in
-
+            
             leftBtn?.setImage(kImage("back_icon"), for: .normal)
             leftBtn?.addTarget(self, action: #selector(handlePop), for: .touchUpInside)
             righttBtn_gl = rightBtn
             titleLab?.text = "根控制器"
-            titleLab?.textColor = UIColor.text()
+            titleLab?.textColor = UIColor.white
             titleLab?.font = kSystemFontBold(size: 17)
             self.leftBtn_gl = leftBtn
             self.titleLab_gl = titleLab
@@ -35,7 +35,7 @@ class BaseViewController: UIViewController {
         }
         self.view.addSubview(bar)
         self.bar_gl = bar
-        bar.backgroundColor = .backgroundColor
+        bar.backgroundColor = UIColor.black
     }
     
     deinit {
@@ -47,8 +47,8 @@ class BaseViewController: UIViewController {
         
         if let nav = self.navigationController, nav.viewControllers.count > 1 {
             
-//            self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: R.image.ic_commom__back(), style: .done, target: self, action: #selector(handlePop))
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "ic_commom__back"), style: .done, target: self, action: #selector(handlePop))
+            //            self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: R.image.ic_commom__back(), style: .done, target: self, action: #selector(handlePop))
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "back_icon"), style: .done, target: self, action: #selector(handlePop))
         }
     }
     
@@ -59,7 +59,7 @@ class BaseViewController: UIViewController {
     func pop() {
         self.navigationController?.popViewController(animated: true)
     }
-
+    
     
     
 }

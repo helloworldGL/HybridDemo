@@ -11,6 +11,7 @@ class OneBoard: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.bar_gl.titleLabel?.text = "One"
 
     }
     

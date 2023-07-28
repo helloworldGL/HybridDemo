@@ -13,12 +13,6 @@
 
 @interface NBNavigationBar ()
 
-@property (nonatomic, weak) UIButton *leftBtn;
-@property (nonatomic, weak) UIButton *rightBtn;
-@property (nonatomic, weak) UILabel *titleLabel;
-@property (nonatomic, weak) UIView *bottomLineView;
-@property (nonatomic, weak) UIView *leftLineView;
-@property (retain, nonatomic) UIColor *color;
 
 @end
 
@@ -101,6 +95,7 @@
     leftBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     self.leftBtn = leftBtn;
     
+    
     // 左侧按钮分割线
     UIView *leftLineView = [[UIView alloc] init];
     leftLineView.backgroundColor = [UIColor systemSeparatorColor];
@@ -129,7 +124,7 @@
     
     // 底部分割线
     UIView *bottomLineView = [[UIView alloc] init];
-    bottomLineView.backgroundColor = [UIColor clearColor];
+    bottomLineView.backgroundColor = [UIColor lightGrayColor];
     [self addSubview:bottomLineView];
     [bottomLineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.offset(0.0);

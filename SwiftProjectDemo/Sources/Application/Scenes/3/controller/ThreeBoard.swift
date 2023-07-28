@@ -11,6 +11,7 @@ class ThreeBoard: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.bar_gl.titleLabel?.text = "Three"
 
         // Do any additional setup after loading the view.
     }

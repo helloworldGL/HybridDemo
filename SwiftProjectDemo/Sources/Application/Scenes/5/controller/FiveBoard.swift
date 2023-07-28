@@ -11,6 +11,7 @@ class FiveBoard: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.bar_gl.titleLabel?.text = "Five"
 
         // Do any additional setup after loading the view.
     }
