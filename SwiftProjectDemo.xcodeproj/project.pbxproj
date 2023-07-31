@@ -184,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				5B1425A92A7365F900C2B739 /* Application */,
-				5B1425A32A73659300C2B739 /* vendor */,
+				5B14418B2A77CB6000A64614 /* vendor */,
 				5B1425A22A73658100C2B739 /* platform */,
 			);
 			path = Sources;
@@ -193,19 +193,11 @@
 		5B1425A22A73658100C2B739 /* platform */ = {
 			isa = PBXGroup;
 			children = (
+				5B14418E2A77CBD800A64614 /* Network */,
 				5B1425A72A7365E000C2B739 /* oc */,
-				5B1425A62A7365D500C2B739 /* Network */,
 				5B1425A52A7365C300C2B739 /* Extensions */,
 			);
 			path = platform;
-			sourceTree = "<group>";
-		};
-		5B1425A32A73659300C2B739 /* vendor */ = {
-			isa = PBXGroup;
-			children = (
-				5B1425A82A7365E800C2B739 /* Tools */,
-			);
-			path = vendor;
 			sourceTree = "<group>";
 		};
 		5B1425A52A7365C300C2B739 /* Extensions */ = {
@@ -214,13 +206,6 @@
 				5B63B6492A739EED00ED338F /* Extensions */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		5B1425A62A7365D500C2B739 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		5B1425A72A7365E000C2B739 /* oc */ = {
@@ -238,21 +223,14 @@
 			path = oc;
 			sourceTree = "<group>";
 		};
-		5B1425A82A7365E800C2B739 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tools;
-			sourceTree = "<group>";
-		};
 		5B1425A92A7365F900C2B739 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				5B14418D2A77CBAE00A64614 /* Enum */,
+				5B14418C2A77CB9100A64614 /* Manager */,
 				5B1425AA2A73660800C2B739 /* rootBoard */,
 				5B1425AB2A73661200C2B739 /* Scenes */,
-				5B1425AD2A73662700C2B739 /* Manager */,
 				5B1425AF2A73667500C2B739 /* Constant */,
-				5B1425AC2A73661F00C2B739 /* Enum */,
 				5B1425AE2A73664200C2B739 /* Base */,
 			);
 			path = Application;
@@ -276,20 +254,6 @@
 				5B1425B92A73680A00C2B739 /* 5 */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		5B1425AC2A73661F00C2B739 /* Enum */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Enum;
-			sourceTree = "<group>";
-		};
-		5B1425AD2A73662700C2B739 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Manager;
 			sourceTree = "<group>";
 		};
 		5B1425AE2A73664200C2B739 /* Base */ = {
@@ -407,18 +371,9 @@
 		5B1425C52A73680A00C2B739 /* 1 */ = {
 			isa = PBXGroup;
 			children = (
-				5B1425C62A73680A00C2B739 /* viewmodel */,
 				5B1425C72A73680A00C2B739 /* controller */,
-				5B1425C82A73680A00C2B739 /* view */,
 			);
 			path = 1;
-			sourceTree = "<group>";
-		};
-		5B1425C62A73680A00C2B739 /* viewmodel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = viewmodel;
 			sourceTree = "<group>";
 		};
 		5B1425C72A73680A00C2B739 /* controller */ = {
@@ -427,13 +382,6 @@
 				5B1425CF2A73687B00C2B739 /* OneBoard.swift */,
 			);
 			path = controller;
-			sourceTree = "<group>";
-		};
-		5B1425C82A73680A00C2B739 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
 			sourceTree = "<group>";
 		};
 		5B1425C92A73680A00C2B739 /* 3 */ = {
@@ -466,6 +414,35 @@
 			children = (
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		5B14418B2A77CB6000A64614 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = vendor;
+			path = Application/vendor;
+			sourceTree = "<group>";
+		};
+		5B14418C2A77CB9100A64614 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		5B14418D2A77CBAE00A64614 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		5B14418E2A77CBD800A64614 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		5B63B6492A739EED00ED338F /* Extensions */ = {
