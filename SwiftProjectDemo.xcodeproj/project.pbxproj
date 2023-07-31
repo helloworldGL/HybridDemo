@@ -484,10 +484,12 @@
 			buildConfigurationList = 5B1425962A73543600C2B739 /* Build configuration list for PBXNativeTarget "SwiftProjectDemo" */;
 			buildPhases = (
 				0E9769B1416CBF06ACD79C1B /* [CP] Check Pods Manifest.lock */,
+				4F374EF9EE28981543B24F1B /* [CP-User] Run Flutter Build mix_flutter Script */,
 				5B1425682A73543400C2B739 /* Sources */,
 				5B1425692A73543400C2B739 /* Frameworks */,
 				5B14256A2A73543400C2B739 /* Resources */,
 				A5F1BB25BF9893ECF78BE67B /* [CP] Embed Pods Frameworks */,
+				392FFB8AEFB9DE9A8CC1B077 /* [CP-User] Embed Flutter Build mix_flutter Script */,
 			);
 			buildRules = (
 			);
@@ -627,6 +629,26 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		392FFB8AEFB9DE9A8CC1B077 /* [CP-User] Embed Flutter Build mix_flutter Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Embed Flutter Build mix_flutter Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../mix_flutter/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh embed_and_thin";
+		};
+		4F374EF9EE28981543B24F1B /* [CP-User] Run Flutter Build mix_flutter Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Run Flutter Build mix_flutter Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../mix_flutter/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
 		};
 		A5F1BB25BF9893ECF78BE67B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

@@ -7,6 +7,7 @@
 
 import UIKit
 import Foundation
+import Flutter
 
 class YTabBarBoard: UITabBarController {
 
@@ -27,7 +28,12 @@ class YTabBarBoard: UITabBarController {
     
     func toMain() {
         
-        let boardArr = [OneBoard(),TwoBoard(),ThreeBoard(),FourBoard(),FiveBoard()]
+        let flutterEngine = (UIApplication.shared.delegate as! AppDelegate).flutterEngine
+        let flutterViewController =
+            FlutterViewController(engine: flutterEngine, nibName: nil, bundle: nil)
+//         flutterViewController.hidesBottomBarWhenPushed = true
+        
+        let boardArr = [OneBoard(),TwoBoard(),ThreeBoard(),FourBoard(),flutterViewController]
         var navArray:[UIViewController] = [UIViewController]()
         var i = 0
         while i<images.count {
@@ -117,3 +123,4 @@ class YTabBarBoard: UITabBarController {
         }
     }
 }
+

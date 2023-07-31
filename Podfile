@@ -3,6 +3,9 @@ install! 'cocoapods',
 
 platform :ios,'11.0'
 
+flutter_application_path = '../mix_flutter'
+load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
+
 def shared_pods
     ui_pods
     rx_pods
@@ -66,6 +69,10 @@ target 'SwiftProjectDemo' do
   use_frameworks!
   inhibit_all_warnings!#消除警告
   shared_pods
-  
+  install_all_flutter_pods(flutter_application_path)
 
+end
+
+post_install do |installer|
+    flutter_post_install(installer) if defined?(flutter_post_install)
 end

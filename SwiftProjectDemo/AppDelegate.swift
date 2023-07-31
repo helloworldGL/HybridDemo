@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import Flutter
+import FlutterPluginRegistrant
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    lazy var flutterEngine = FlutterEngine(name: "my flutter engine")
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         setup()
@@ -18,11 +22,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setup() {
+        
+        flutterEngine.run()
         window = UIWindow.init(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
         let itemsViewControler: YTabBarBoard = YTabBarBoard()
         window?.rootViewController = itemsViewControler
         window?.makeKeyAndVisible()
+        
+
     }
 }
+
 
